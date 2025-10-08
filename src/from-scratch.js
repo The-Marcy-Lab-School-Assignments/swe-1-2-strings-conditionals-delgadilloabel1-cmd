@@ -51,13 +51,29 @@ const funTypes = (jsType) => {
   }
 };
 
-const rounder = () => {
+const rounder = (float, roundSetting) => {
+  if (roundSetting === "up") {
+    return Math.ceil(float);
+  } else if (roundSetting === "down") {
+    return Math.floor(float)
+  } else if (roundSetting === "honest") {
+    return Math.round(float)
+  }
+
 };
 
-const formatName = () => {
+const formatName = (first, last) => {
+  let firstLetter = first[0].toUpperCase();
+  let restOfFirst = first.slice(1).toLowerCase()
+  let capFirst = firstLetter + restOfFirst;
+  let lastLetter = last[0].toUpperCase()
+  let restOfLast = last.slice(1).toLowerCase();
+  let capLast = lastLetter + restOfLast
+  return capFirst + " " + capLast;
 };
 
 const extractDomain = () => {
+
 };
 
 const startsWithVowel = () => {
