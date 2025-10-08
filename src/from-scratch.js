@@ -1,4 +1,19 @@
-const measureRain = () => {
+const measureRain = (inches) => {
+  if (inches === 0) {
+    return "drought";
+  } else if (inches < 2) {
+    return "dry";
+  } else if (inches < 4) {
+    return "average";
+  } else if (inches < 6) {
+    return "rainy";
+  } else if (inches >= 6) {
+    return "flood";
+  }
+
+};
+
+const happyBirthdayPet = (breed, age) => {
   if (breed === "snake") {
     return "Hiss hiss!"
   } else if (breed === "cat" && age < 5) {
@@ -16,25 +31,7 @@ const measureRain = () => {
   }
 };
 
-const happyBirthdayPet = () => {
-  if (breed === "snake") {
-    return "Hiss hiss!"
-  } else if (breed === "cat" && age < 5) {
-    return "Mew mew!";
-  } else if (breed === "cat" && age >= 5) {
-    return "Meow meow!"
-  } else if (breed === "dog" && age < 5) {
-    return "Arf arf!"
-  } else if (breed === "dog" && age < 10) {
-    return "Woof woof!"
-  } else if (breed === "dog" && age >= 10) {
-    return "Boof!"
-  } else {
-    return "Happy birthday!"
-  }
-};
-
-const funTypes = () => {
+const funTypes = (jsType) => {
   if (jsType === null) {
     return "Nothing, and I did set that."
   } else if (Array.isArray(jsType)) {
@@ -53,6 +50,7 @@ const funTypes = () => {
     return "Nothing, but I didn't set that."
   }
 };
+
 const rounder = () => {
 };
 
