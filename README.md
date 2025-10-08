@@ -111,7 +111,7 @@ It should return a message in the following situations:
 - null - `"Nothing, and I did set that."`
 - an object - `"Anybody got the key?"`
 - an array - `"I order you to be indexed."`
-- NaN - `"Well, now you're just showing off."`
+- NaN - `"Well, now you're just showing off."
 
 Some of these won't work using the `typeof` operator. If you're stuck, try Googling "JavaScript how to tell if a value is of type ____".
 
