@@ -72,14 +72,24 @@ const formatName = (first, last) => {
   return capFirst + " " + capLast;
 };
 
-const extractDomain = () => {
-
+const extractDomain = (email) => {
+  const parts = email.split("@");
+  return parts[1];
 };
 
-const startsWithVowel = () => {
+const startsWithVowel = (word) => {
+  if (word[0].toLowerCase() === "a" || word[0].toLowerCase() === "e" || word[0].toLowerCase() === "i" || word[0].toLowerCase() === "o" || word[0].toLowerCase() === "u") {
+    return true
+  } else
+    return false
 };
 
-const rotate = () => {
+const rotate = (str, num) => {
+  const rotationAmount = num % str.length
+  const splitIndex = str.length - rotationAmount
+  const partToMove = str.slice(splitIndex)
+  const restOfStr = str.slice(0, splitIndex)
+  return partToMove + restOfStr
 };
 
 module.exports = {
